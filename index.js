@@ -72,21 +72,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("accessModal");
     modal.classList.add("show");
     stopHearts(); 
+
+    modal.addEventListener("click", function(event) {
+        if(!event.target.closest(".modal-content")) {
+            modal.classList.remove("show");
+            startHearts();
+        }
+    });
 });
 
-// Check anniversary date & resume hearts if correct
-function checkAnswer() {
-    const correctAnswer = "2024-09-01";
-    const userInput = document.getElementById("answerInput").value;
-    const errorMessage = document.getElementById("errorMessage");
-    const modal = document.getElementById("accessModal");
 
-    if (userInput === correctAnswer) {
-        modal.classList.remove("show"); 
-        startHearts(); 
-    } else {
-        errorMessage.textContent = "🚨 Not quite, handsome. Try again.";
-    }
-}
-
-startHearts();

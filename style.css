@@ -272,27 +272,15 @@ footer {
     color: #333;
 }
 
-input {
-    width: 80%;
-    padding: 0.625rem;
-    border: 1px solid #ccc;
-    border-radius: 2rem;
-    text-align: center;
+.instructions-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
-button {
-    padding: 0.625rem;
-    width: 50%;
-    background: #EB5B00;
-    color: white;
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-}
-
-.error {
-    color: #640D5F;
-    font-size: 0.875rem;
+.instructions {
+    color:#EB5B00;
+    font-style: italic;
 }
 
 /* Show Modal */
