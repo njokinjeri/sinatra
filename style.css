@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #FAF3F0;
+    font-family: "Space Grotesk", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    height: 90%;
+    display: flex;
+    flex: column;
+    justify-content: center;
+    align-items: center;
+    animation: float 6s ease-in-out infinite;
+    animation-play-state: running;
+}
+
+section:hover {
+    animation-play-state: paused;
+}
+
+.harman-kardon {
+    width: 23.75rem;
+    height: 23.75rem;
+    background: radial-gradient(circle at center, #441752 30%, #222 90%);
+    border-radius: 50%;
+    position: relative;
+    background-color: #441752;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    box-shadow: 0px 0px 22px -6px #8174A0;
+}
+
+.controls {
+    position: absolute;
+    top: 130px;
+    left: 37%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    color: #A888B5;
+}
+
+.fa-solid {
+    font-size: 1.125rem;
+}
+
+.volume-reduce {
+    transform: skew(-10deg, 15deg) translate(-10px, -5px);
+  }
+  
+  .power-btn {
+    transform: skewX(0deg);
+  }
+  
+  .volume-add {
+    transform: skew(10deg, -15deg) translate(10px, -5px);
+  }
+
+  #power-icon.active {
+    color: #D91656;
+  }
+
+.handle {
+    position: absolute;
+    top: 1.75rem;
+    left: 28%;
+    height: 5.25rem;
+    width: 8.875rem;
+    background-color: #EFF3EA;
+    border-radius: 50%;
+}
+
+.top-handle {
+    position: absolute;
+    top: 0;
+    left: -16%;
+    width: 11.75rem;
+    height: 10rem;
+    border: 30px solid transparent;
+    border-top: 43px solid #EFB6C8;
+    border-radius: 50%;
+    transform: translateY(-30%) rotateX(36deg) rotate(-1deg);
+    box-shadow: -2px -12px 18px -3px rgba(168, 136, 181, 0.6);
+}
+
+.logo {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 32%;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    letter-spacing: 0.063rem;
+    font-weight: 500;
+    text-align: center;
+    background-color: #EFB6C8;
+    border-radius: 2rem;
+    padding: 0.047rem 0.625rem;
+}
+
+.heart {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    color: #DBC4F0;
+    animation: floatUp 5s ease-in infinite, sideWays 3s ease-in-out infinite alternate;
+}
+
+article {
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+}
+
+.article-container {
+    display: flex;
+    background-color:#EFB6C8;
+    padding: 1.25rem;
+    border-radius: 1.875rem;
+    min-width: 2.5rem;
+    max-width: 14.375rem;
+    min-height: 2.5rem;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.article-container:before,
+.article-container:after {
+  content:"";
+  background-color:#EFB6C8;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+.article-container:before {
+    width: 2.75rem;
+    height: 2.75rem;
+    top:-1.563rem;
+    left: 1.563rem;
+    box-shadow:-50px 30px 0 -12px #EFB6C8;
+  }
+.article-container:after {
+    bottom:-1.875rem;
+    right: 1.125rem;
+    width: 1.875rem;
+    height: 1.875rem;
+    box-shadow:40px -34px 0 0 #EFB6C8,
+               -28px -6px 0 -2px #EFB6C8,
+               -24px 17px 0 -6px #EFB6C8,
+               -5px 25px 0 -10px #EFB6C8;
+  }
+
+.article-text {
+    font-size: 0.875rem;
+    color: #640D5F;
+    font-style: italic;
+}
+
+footer {
+    height: 10%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-p1 {
+    color: #8174A0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.footer-p2 {
+    font-size: 1rem;
+    font-weight: 600;
+    background: #640D5F;
+    background: linear-gradient(to right, #640D5F 0%, #EB5B00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 10s steps(40, end) forwards;
+    animation-play-state: paused;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        bottom: 1.25rem;
+        color: #DBC4F0;
+    }
+    100% {
+        opacity: 0;
+        bottom: 60%;
+        color: #FFCACC;
+    }
+}
+
+@keyframes sideWays {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(20px); }
+}
+
+/* modal*/
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.125rem;
+}
+
+.modal-content h2 {
+    color: #333;
+}
+
+input {
+    width: 80%;
+    padding: 0.625rem;
+    border: 1px solid #ccc;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+button {
+    padding: 0.625rem;
+    width: 50%;
+    background: #EB5B00;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.error {
+    color: #640D5F;
+    font-size: 0.875rem;
+}
+
+/* Show Modal */
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
