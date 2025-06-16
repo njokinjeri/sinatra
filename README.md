@@ -12,3 +12,6 @@ A blend of good design, nostalgic audio, and creative web tech — because somet
 🔗 https://sinatra-i1j4.onrender.com
 
 This site is deployed on Render and automatically updated using GitHub Actions.
+
+
+
