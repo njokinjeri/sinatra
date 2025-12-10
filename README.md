@@ -11,5 +11,5 @@ Built just for the vibe - because not everything needs a reason beyond being bea
 
 ##### Live Demo
 
-https://somethingsilly.netlify.app/
+https://njokinjeri.github.io/sinatra/
 
